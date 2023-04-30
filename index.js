@@ -14,6 +14,9 @@ app.use(
 
 app.use(express.json());
 
+//Rotas da API
+app.post('person', (req, res) => {});
+
 // rota inicial / endpoint
 app.get('/', (req, res) => {
   //mostrar req
