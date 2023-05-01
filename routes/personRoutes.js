@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+const Person = require('../models/Person');
+
 //Rotas da API
 router.post('/', async (req, res) => {
   //req.body
