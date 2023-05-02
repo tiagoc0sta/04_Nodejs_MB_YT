@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     salary,
     approved,
   };
-
+  //
   try {
     //crinado dados
     await Person.create(person);
