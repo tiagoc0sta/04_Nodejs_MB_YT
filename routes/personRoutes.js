@@ -3,6 +3,7 @@ const router = require('express').Router();
 const Person = require('../models/Person');
 
 //Rotas da API
+// Criar dados
 router.post('/', async (req, res) => {
   //req.body
 
@@ -26,6 +27,15 @@ router.post('/', async (req, res) => {
     res
       .status(201)
       .json({ message: 'Pessoa inserida no sistema com sucesso!' });
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+});
+
+//read -leitura de dados
+router.get('/', async (req, res) => {
+  try {
+    const people = await Person.find();
   } catch (error) {
     res.status(500).json({ error: error });
   }
